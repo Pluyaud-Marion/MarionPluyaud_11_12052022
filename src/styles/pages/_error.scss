@@ -1,0 +1,24 @@
+.container-error {
+    display: flex;
+    color: $primary-color;
+    align-items: center;
+    flex-direction: column;
+
+    h1 {
+        font-size: 200px;
+        margin-bottom: 1%;
+    }
+
+    h2 {
+        font-size: 24px;
+        margin-bottom: 11%;
+    }
+
+    .link {
+        font-size: 18px;
+        text-decoration: underline;
+        color: $primary-color;
+        margin-bottom: 7%;
+
+    }
+}

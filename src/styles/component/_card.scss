@@ -1,0 +1,26 @@
+.Card {
+    width: 29%;
+    height: 300px;
+    border-radius: 10px;
+    display: flex;
+    margin-left: 3%;
+    margin-top: 3%;
+
+
+    .picture {
+        object-fit: cover;
+        width: 26%;
+        height: 300px;
+        border-radius: 10px;
+        position: absolute;
+    }
+
+    .title {
+        position: relative;
+        color: white;
+        top: 230px;
+        font-size: 18px;
+        left: 17px;
+        width: 64%;
+    }
+}

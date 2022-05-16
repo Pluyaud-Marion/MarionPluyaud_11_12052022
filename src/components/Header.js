@@ -1,12 +1,13 @@
 import React from 'react';
-import Logo from './Logo';
 import Navigation from './Navigation';
 
 
 const Header = () => {
     return (
         <div className='header'>
-            <Logo />
+            <a href='/'>
+                <img src="./logo.png" alt='logo kasa'></img>
+            </a>
             <Navigation />
         </div>
     );

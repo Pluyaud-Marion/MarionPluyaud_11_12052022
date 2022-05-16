@@ -1,4 +1,4 @@
-@import "../variables";
+@import "../_variables";
 
 .navigation {
     width: 18%;
@@ -8,5 +8,11 @@
     .nav {
         text-decoration: none;
         color: $primary-color;
+    }
+
+    .nav-active {
+        text-decoration: none;
+        color: $primary-color;
+        border-bottom: $primary-color solid;
     }
 }

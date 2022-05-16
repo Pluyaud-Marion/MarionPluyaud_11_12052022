@@ -1,0 +1,21 @@
+.banner {
+    margin: 0 auto;
+    width: 90%;
+    height: 223px;
+
+    img {
+        border-radius: 25px;
+        filter: brightness(0.8);
+        position: absolute;
+        height: 223px;
+        width: 90%;
+    }
+
+    .title {
+        color: #fff;
+        font-size: 40px;
+        position: relative;
+        text-align: center;
+        top: 90px;
+    }
+}

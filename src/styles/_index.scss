@@ -1,0 +1,9 @@
+// importe tous les fichiers styles
+@import "./_settings.scss";
+@import "./component/_header.scss";
+@import "./component/_navigation.scss";
+@import "./component/footer";
+@import "./component/gallery";
+@import "./component/card";
+@import "./pages/home";
+@import "./pages/error"
