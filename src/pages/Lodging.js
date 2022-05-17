@@ -17,7 +17,7 @@ const Lodging = () => {
         axios.get("../data.json")
             .then(res => setData(res.data.find(data => data.id === id)))
 
-    }, [])
+    }, [id])
 
     return (
         <div>
