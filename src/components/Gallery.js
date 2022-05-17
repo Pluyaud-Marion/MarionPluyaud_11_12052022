@@ -8,6 +8,7 @@ const Gallery = () => {
     useEffect(() => {
         axios.get("data.json")
             .then(res => setData(res.data))
+
     }, [])
 
     return (
