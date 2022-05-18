@@ -6,6 +6,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import Tag from '../components/Tag';
 import Star from '../components/Star';
+import Dropdown from '../components/Dropdown';
 
 const Lodging = () => {
 
@@ -35,18 +36,30 @@ const Lodging = () => {
 
             </div>
             <p className='location'>{data.location}</p>
-            <div className='container-tag'>
-                {
-                    data?.tags?.map((tag, index) => (
-                        <Tag key={index} tag={tag} />
-                    ))
-                }
+            <div className='container-tag-star'>
+                <div className='container-tag'>
+                    {
+                        data?.tags?.map((tag, index) => (
+                            <Tag key={index} tag={tag} />
+                        ))
+                    }
+                </div>
+                <div className='star'>
+                    {
+                        <Star key={data.id} star={data.rating} />
+                    }
+                </div>
             </div>
-            <div className='container-star'>
+            <div className='container-dropdown'>
                 {
-                    <Star key={data.id} star={data.rating} />
+                    <Dropdown titleDropdown={"Description"} key={"description " + data.id} propsDescription={data.description} />
                 }
+                {
 
+                    <Dropdown titleDropdown={"Equipements"} key={"équipement " + data.id} propsEquipment={data.equipments} />
+
+
+                }
             </div>
 
         </div>

@@ -7,9 +7,9 @@ const Star = ({ star }) => {
         <div>
             {
                 range.map((element, index) => star >= element ? (
-                    <img key={index} src='../red-star.png' alt='étoile pleine' />) :
+                    <img key={index} src='../red-star.png' alt='étoile pleine' className='red-star' />) :
                     (
-                        <img key={index} src='../grey-star.png' alt='étoile vide' />)
+                        <img key={index} src='../grey-star.png' alt='étoile vide' className='grey-star' />)
                 )
             }
         </div>
