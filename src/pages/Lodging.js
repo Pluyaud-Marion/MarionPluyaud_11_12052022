@@ -5,6 +5,7 @@ import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import Tag from '../components/Tag';
+import Star from '../components/Star';
 
 const Lodging = () => {
 
@@ -40,6 +41,12 @@ const Lodging = () => {
                         <Tag key={index} tag={tag} />
                     ))
                 }
+            </div>
+            <div className='container-star'>
+                {
+                    <Star key={data.id} star={data.rating} />
+                }
+
             </div>
 
         </div>
