@@ -7,6 +7,8 @@ import axios from 'axios';
 import Tag from '../components/Tag';
 import Star from '../components/Star';
 import Dropdown from '../components/Dropdown';
+import Footer from '../components/Footer';
+import CoverPicture from '../components/CoverPicture';
 
 const Lodging = () => {
 
@@ -24,9 +26,12 @@ const Lodging = () => {
     return (
         <div>
             <Header />
-            <div className='container-picture'>
-                <img src={data.cover} alt={"photo de l'appartement " + data.title} className='picture' />
-            </div>
+            {/* <div className='container-picture'> */}
+            <CoverPicture key={data?.id} allPictures={data?.pictures} />
+            {/* <img src="../arrow-next.png" alt="flèche suivant" className='arrow-next' />
+                <img src="../arrow-prev.png" alt="flèche précédent" className='arrow-prev' /> */}
+            {/* <img src={data.cover} alt={"photo de l'appartement " + data.title} className='picture' /> */}
+            {/* </div> */}
             <div className='container-title-name'>
                 <h1 className='title'>{data.title}</h1>
                 <div className='host'>
@@ -61,7 +66,7 @@ const Lodging = () => {
 
                 }
             </div>
-
+            <Footer />
         </div>
     );
 };

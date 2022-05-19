@@ -30,14 +30,13 @@ const Dropdown = ({ titleDropdown, propsDescription, propsEquipment }) => {
         }
     }
 
-
     return (
         <div className='Dropdown'>
             <div className='container-title' id={"open " + titleDropdown} onClick={toogle}>
                 <span>{titleDropdown}</span>
                 <img className='chevron' id={"chevron " + titleDropdown} src="../arrow-up.png" alt="arrow" />
             </div>
-            <div className='test'>
+            <div>
                 {
                     titleDropdown === "Description" ?
                         (
