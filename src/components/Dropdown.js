@@ -1,31 +1,41 @@
 import React from 'react';
 
 const Dropdown = ({ titleDropdown, propsDescription, propsEquipment }) => {
-    //const title = ["description", "equipements"]
 
     function toogle(e) {
         const description = document.getElementById("description")
         const equipment = document.getElementById("equipments")
-        //const chevron = document.querySelector(".chevron")
+        const chevronDescription = document.getElementById("chevron Description")
+        const chevronEquipment = document.getElementById("chevron Equipements")
 
-        console.log(e.target);
 
-        if (e.target.id === "open") {
+        if (e.target.id === "open Description") {
             description.style.display = "block"
-            e.target.setAttribute("id", "close")
-        } else if (e.target.id === "close") {
+            chevronDescription.style.transform = "rotate(180deg)"
+            e.target.setAttribute("id", "close Description")
+        } else if (e.target.id === "close Description") {
             description.style.display = "none"
-            e.target.setAttribute("id", "open")
+            chevronDescription.style.transform = "rotate(360deg)"
+            e.target.setAttribute("id", "open Description")
         }
 
+        if (e.target.id === "open Equipements") {
+            equipment.style.display = "block"
+            chevronEquipment.style.transform = "rotate(180deg)"
+            e.target.setAttribute("id", "close Equipements")
+        } else if (e.target.id === "close Equipements") {
+            equipment.style.display = "none"
+            chevronEquipment.style.transform = "rotate(360deg)"
+            e.target.setAttribute("id", "open Equipements")
+        }
     }
 
 
     return (
         <div className='Dropdown'>
-            <div className='container-title' id="open" onClick={(e) => toogle(e)}>
+            <div className='container-title' id={"open " + titleDropdown} onClick={toogle}>
                 <span>{titleDropdown}</span>
-                <img className='chevron' src="../arrow-up.png" alt="arrow" />
+                <img className='chevron' id={"chevron " + titleDropdown} src="../arrow-up.png" alt="arrow" />
             </div>
             <div className='test'>
                 {
