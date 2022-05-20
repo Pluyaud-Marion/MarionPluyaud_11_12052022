@@ -1,20 +1,10 @@
 import React, { useState } from 'react';
 
 const CoverPicture = ({ allPictures }) => {
-    // return (
-    //     <div className='container-picture'>
-    //         <img src="../arrow-next.png" alt="flèche suivant" className='arrow-next' />
-    //         <img src="../arrow-prev.png" alt="flèche précédent" className='arrow-prev' />
-    //         {
-    //             picture?.map((el, index) => (
-    //                 <img src={el} alt={"photo de l'appartement " + index} key={index} className='picture' />
 
-    //             ))
-    //         }
-    //     </div>
-    // );
     const [pictureIndex, setPictureIndex] = useState(0);
 
+    // si pictureIndex (dans le state) est égal au nombre d'images - 1 => change pictureIndex en 0 / sinon ajoute 1
     function next() {
         if (pictureIndex === allPictures.length - 1) {
             const index = 0
@@ -26,6 +16,7 @@ const CoverPicture = ({ allPictures }) => {
         }
     }
 
+    // si pictureIndex (dans le state) est égal à 0 => change pictureIndex en le nombre d'images - 1 / sinon retire 1
     function previous() {
         if (pictureIndex === 0) {
             const index = allPictures.length - 1
@@ -38,12 +29,18 @@ const CoverPicture = ({ allPictures }) => {
 
     return (
         <div className='container-picture'>
-            <img src="../arrow-next.png" alt="flèche suivant" className='arrow-next' onClick={next} />
+            {/* Est ce que allPictures est chargé ? si oui, est ce qu'il y a plus d'1 image? si oui met l'image de la flèche suivant */}
+            {allPictures ? (allPictures.length > 1 ? (<img src="../arrow-next.png" alt="flèche suivant" className='arrow-next' onClick={next} />) : (null)) : (<span>'chargement'</span>)}
+
+            {/* Est ce que allPictures est chargé? si oui affiche l'image dont l'index est pictureIndex (dans le state) = change à chaque clic sur les flèches */}
             {allPictures ? <img src={allPictures[pictureIndex]} alt='img' className='picture' /> : <span>'chargement'</span>}
-            {/* <img src={allPictures[pictureIndex]} alt='img' className='picture' /> */}
-            <img src="../arrow-prev.png" alt="flèche précédent" className='arrow-prev' onClick={previous} />
+
+            {/* Est ce que allPictures est chargé ? si oui, est ce qu'il y a plus d'1 image? si oui met l'image de la flèche précédent */}
+            {allPictures ? (allPictures.length > 1 ? (<img src="../arrow-prev.png" alt="flèche précédent" className='arrow-prev' onClick={previous} />) : (null)) : (<span>'chargement'</span>)}
+
         </div>
     )
+
 };
 
 export default CoverPicture;
