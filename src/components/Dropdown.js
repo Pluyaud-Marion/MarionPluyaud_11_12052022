@@ -1,51 +1,29 @@
-import React from 'react';
-
-const Dropdown = ({ titleDropdown, propsDescription, propsEquipment }) => {
-
-    function toogle(e) {
-        const description = document.getElementById("description")
-        const equipment = document.getElementById("equipments")
-        const chevronDescription = document.getElementById("chevron Description")
-        const chevronEquipment = document.getElementById("chevron Equipements")
+import React, { useState } from 'react';
 
 
-        if (e.target.id === "open Description") {
-            description.style.display = "block"
-            chevronDescription.style.transform = "rotate(180deg)"
-            e.target.setAttribute("id", "close Description")
-        } else if (e.target.id === "close Description") {
-            description.style.display = "none"
-            chevronDescription.style.transform = "rotate(360deg)"
-            e.target.setAttribute("id", "open Description")
-        }
+const Dropdown = ({ titleDropdown, contentParaph, contentList }) => {
+    const [show, setShow] = useState(false)
 
-        if (e.target.id === "open Equipements") {
-            equipment.style.display = "block"
-            chevronEquipment.style.transform = "rotate(180deg)"
-            e.target.setAttribute("id", "close Equipements")
-        } else if (e.target.id === "close Equipements") {
-            equipment.style.display = "none"
-            chevronEquipment.style.transform = "rotate(360deg)"
-            e.target.setAttribute("id", "open Equipements")
-        }
+    function toogle() {
+        show === false ? setShow(true) : setShow(false)
     }
 
     return (
         <div className='Dropdown'>
-            <div className='container-title' id={"open " + titleDropdown} onClick={toogle}>
+            <div className='container-title' onClick={toogle}>
                 <span>{titleDropdown}</span>
-                <img className='chevron' id={"chevron " + titleDropdown} src="../arrow-up.png" alt="arrow" />
+                <img className={show ? 'chevron-up' : 'chevron'} src="../arrow-down.png" alt="arrow" />
             </div>
             <div>
                 {
-                    titleDropdown === "Description" ?
+                    contentList === undefined ?
                         (
 
-                            <p key={"content"} className='content' id='description'>{propsDescription}</p>
+                            <p key={"content"} className={show ? 'content-show' : 'content'} >{contentParaph}</p>
                         ) : (
-                            <ul key={"list"} className='content' id='equipments'>
+                            <ul key={"list"} className={show ? 'content-show' : 'content'} >
                                 {
-                                    propsEquipment?.map((list, index) => (
+                                    contentList?.map((list, index) => (
                                         <li key={index}>{list}</li>
                                     ))
                                 }
