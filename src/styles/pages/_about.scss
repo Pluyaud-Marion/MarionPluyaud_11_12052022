@@ -1,13 +1,14 @@
-.container-dropdown {
+.container-dropdown-about {
     display: flex;
     margin: 2% auto;
-    width: 90%;
-    justify-content: space-between;
+    width: 80%;
+    flex-direction: column;
+    display: flex;
+    justify-content: space-around;
+    height: 500px;
 
     .Dropdown {
-        width: 45%;
-        height: 210px;
-        position: relative;
+        width: 100%;
 
         .container-title {
             background-color: $primary-color;
@@ -15,7 +16,6 @@
             width: 96%;
             color: white;
             height: 40px;
-            position: absolute;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -37,7 +37,6 @@
             margin-bottom: 2%;
             margin-top: 0;
             border-radius: 10px;
-            position: absolute;
             top: 42px;
             padding-left: 2%;
             padding-right: 2%;
@@ -55,13 +54,11 @@
             margin-bottom: 2%;
             margin-top: 0;
             border-radius: 10px;
-            position: absolute;
             top: 42px;
             padding-left: 2%;
             padding-right: 2%;
             font-size: 18px;
             list-style-type: none;
         }
-
     }
 }

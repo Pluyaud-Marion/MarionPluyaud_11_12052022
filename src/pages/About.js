@@ -13,7 +13,7 @@ const About = () => {
 
     return (
         <div>
-            <div className='container-dropdown'>
+            <div className='container-dropdown-about'>
                 <Dropdown titleDropdown="Fiabilité" contentParaph={about.Fiabilité} />
                 <Dropdown titleDropdown="Respect" contentParaph={about.Respect} />
                 <Dropdown titleDropdown="Service" contentParaph={about.Service} />
