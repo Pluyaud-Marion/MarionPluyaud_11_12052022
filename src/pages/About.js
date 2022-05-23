@@ -13,6 +13,9 @@ const About = () => {
 
     return (
         <div>
+            <div className='banner'>
+                <img src="./banner-about.png" alt="bannière" />
+            </div>
             <div className='container-dropdown-about'>
                 <Dropdown titleDropdown="Fiabilité" contentParaph={about.Fiabilité} />
                 <Dropdown titleDropdown="Respect" contentParaph={about.Respect} />

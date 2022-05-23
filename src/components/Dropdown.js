@@ -30,20 +30,6 @@ const Dropdown = ({ titleDropdown, contentParaph, contentList }) => {
                             </ul>)
                 }
 
-                {/* title.map((el, index) => (el === "description" ?
-                        (
-
-                            <p key={index} className='content'>{propsDescription}</p>
-                        ) : (
-                            <ul key={"list"} className='content'>
-                                {
-                                    propsEquipment?.map((list, index) => (
-                                        <li key={index}>{list}</li>
-                                    ))
-                                }
-                            </ul>))
-                    ) */}
-
             </div>
         </div>
     );

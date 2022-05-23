@@ -1,11 +1,12 @@
 
 
-import { useParams } from 'react-router-dom';
+import { useParams, Navigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import Tag from '../components/Tag';
 import Star from '../components/Star';
 import Dropdown from '../components/Dropdown';
+import Error from './Error';
 
 import CoverPicture from '../components/CoverPicture';
 
@@ -15,15 +16,24 @@ const Lodging = () => {
 
     const [data, setData] = useState([])
 
-
     useEffect(() => {
         axios.get("../data.json")
-            .then(res => setData(res.data.find(data => data.id === id)))
+            .then(res => {
+                if (res.data.find((data => data.id === id)) === undefined) {
+                    window.location.pathname = '../error'
+                } else {
+                    setData(res.data.find(data => data.id === id))
+                }
+
+                //<Navigate to={<Error />} />
+            })
+            .catch(error => console.log(error))
+
+
 
     }, [id])
 
     return (
-
         <div>
 
             {data && <CoverPicture key={data?.id} allPictures={data?.pictures} />}

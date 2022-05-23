@@ -35,6 +35,7 @@ const CoverPicture = ({ allPictures }) => {
             {/* Est ce que allPictures est chargé? si oui affiche l'image dont l'index est pictureIndex (dans le state) = change à chaque clic sur les flèches */}
             {allPictures ? <img src={allPictures[pictureIndex]} alt='img' className='picture' /> : <span>'chargement'</span>}
 
+            {allPictures && <span className='index'>{pictureIndex + 1} / {allPictures?.length}</span>}
             {/* Est ce que allPictures est chargé ? si oui, est ce qu'il y a plus d'1 image? si oui met l'image de la flèche précédent */}
             {allPictures ? (allPictures.length > 1 ? (<img src="../arrow-prev.png" alt="flèche précédent" className='arrow-prev' onClick={previous} />) : (null)) : (<span>'chargement'</span>)}
 
