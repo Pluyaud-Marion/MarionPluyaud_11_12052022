@@ -1,20 +1,32 @@
 
-
-import { useParams, Navigate } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
+// import { useParams, Navigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import Tag from '../components/Tag';
 import Star from '../components/Star';
 import Dropdown from '../components/Dropdown';
-import Error from './Error';
-
+// import Error from './Error';
 import CoverPicture from '../components/CoverPicture';
 
+/**
+ * 
+ * @returns Lodging page with datas and components CoverPicture / Tag / Star / Dropdown
+ */
 const Lodging = () => {
 
+    /**
+     * @constant id in url params
+     * @type {string}
+     */
     const { id } = useParams()
 
+    /**
+     * @constant data - with axios.get in json. Update with setData
+     * @type {object}
+     */
     const [data, setData] = useState([])
+
 
     useEffect(() => {
         axios.get("../data.json")

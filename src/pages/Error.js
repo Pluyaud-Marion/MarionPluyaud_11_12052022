@@ -1,6 +1,10 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
+/**
+ * 
+ * @returns Error Page - with text and navlink for return home
+ */
 const Error = () => {
     return (
         <div>

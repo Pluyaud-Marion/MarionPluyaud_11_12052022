@@ -1,7 +1,10 @@
 import React from 'react';
 import Gallery from '../components/Gallery';
 
-
+/**
+ * 
+ * @returns Page Home with banner and component Gallery
+ */
 const Home = () => {
     return (
         <div>

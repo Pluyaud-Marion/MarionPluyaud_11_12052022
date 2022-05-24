@@ -1,9 +1,23 @@
 import React, { useState } from 'react';
 
-
+/**
+ * 
+ * @param {string} titleDropdown - props of component parent Lodging - title of dropdown
+ * @param {string} contentParaph  - props of component parent Lodging - content of dropdown
+ * @param {object} contentList - props of component parent Lodging - content of dropdown with list
+ * @returns component Dropdown with title and contentParaph of contentList
+ */
 const Dropdown = ({ titleDropdown, contentParaph, contentList }) => {
+    /**
+     * @constant show = false / update in state with setShow
+     * @type {boolean}
+     */
     const [show, setShow] = useState(false)
 
+    /**
+     * Function call onClick
+     * onClick if show in state is false -> update to true // and if show in state is true -> update to false
+     */
     function toogle() {
         show === false ? setShow(true) : setShow(false)
     }

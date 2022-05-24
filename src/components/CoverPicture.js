@@ -1,10 +1,23 @@
 import React, { useState } from 'react';
 
+/**
+ * 
+ * @param {Object} allPictures - props of parent lodging / all of pictures of one lodge
+ * @returns component CoverPicture = arrow next and previous, picture and index
+ */
 const CoverPicture = ({ allPictures }) => {
 
+    /**
+     * @constant pictureIndex - index of current picture - update in state with setPictureIndex
+     * @type {number}
+     */
     const [pictureIndex, setPictureIndex] = useState(0);
 
-    // si pictureIndex (dans le state) est égal au nombre d'images - 1 => change pictureIndex en 0 / sinon ajoute 1
+
+    /**
+     * Function called onClick 
+     * if pictureIndex (on state) = number of pictures - 1 => change pictureIndex in 0 / else + 1
+     */
     function next() {
         if (pictureIndex === allPictures.length - 1) {
             const index = 0
@@ -16,7 +29,10 @@ const CoverPicture = ({ allPictures }) => {
         }
     }
 
-    // si pictureIndex (dans le state) est égal à 0 => change pictureIndex en le nombre d'images - 1 / sinon retire 1
+    /**
+    * Function called onClick 
+    * if pictureIndex (on state) = 0 => change pictureIndex in number of picture -1 / else - 1
+    */
     function previous() {
         if (pictureIndex === 0) {
             const index = allPictures.length - 1

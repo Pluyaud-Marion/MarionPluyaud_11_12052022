@@ -1,7 +1,10 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-
+/**
+ * 
+ * @returns component Navigation (His parent is component Header) with NavLinks
+ */
 const Navigation = () => {
     return (
         <div className='navigation'>

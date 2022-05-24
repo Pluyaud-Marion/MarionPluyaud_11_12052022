@@ -1,7 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-
+/**
+ * 
+ * @param {Object} lodge -  props of component parent Gallery (infos about one lodge)
+ * @returns component Card with all infos - add id in url params
+ */
 const Card = ({ lodge }) => {
     return (
         <div className='Card'>

@@ -1,6 +1,9 @@
 import React from 'react';
 
-
+/**
+ * 
+ * @returns component footer with p and picture
+ */
 const Footer = () => {
     return (
         <div className='container-footer'>
