@@ -5,3 +5,17 @@
     width: 90%;
     margin: 5% auto;
 }
+
+@media screen and (max-width:850px) {
+    .header {
+        img {
+            width: 70%;
+        }
+    }
+}
+
+@media screen and (max-width:767px) {
+    .header {
+        width: 90%;
+    }
+}

@@ -13,45 +13,137 @@
     }
 }
 
-.container-title-name {
+.container-infos {
     display: flex;
     justify-content: space-between;
     width: 90%;
     margin: 0 auto;
 
-    .title {
-        color: $primary-color;
-        margin-bottom: 0;
+    .container-infos-lodge {
+        width: 100%;
+
+        .container-title-location {
+            width: 90%;
+
+            .title {
+                color: $primary-color;
+                margin-bottom: 0;
+            }
+
+            .location {
+                color: $primary-color;
+            }
+        }
     }
 
-    .host {
+    .container-host-star {
         display: flex;
-        align-items: center;
-        width: 14%;
-        justify-content: space-between;
+        flex-direction: column;
+        align-items: flex-end;
+        width: 20%;
 
-        .name {
-            color: $primary-color;
-            margin-right: 5%;
-            text-align: end;
+        .host {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 70%;
+
+            .name {
+                color: $primary-color;
+                margin-left: 10%;
+                text-align: end;
+                width: 40%;
+            }
+
+            img {
+                border-radius: 50%;
+                width: 35%;
+            }
         }
 
-        img {
-            border-radius: 50%;
-            width: 43%;
+        .star {
+            width: 70%;
+            margin-top: 5%;
+        }
+
+    }
+}
+
+
+@media screen and (max-width:1011px) {
+    .container-picture {
+        .picture {
+            height: 300px;
         }
     }
 }
 
-.location {
-    color: $primary-color;
-    margin-top: 0;
-    margin-left: 5%;
+@media screen and (max-width:767px) {
+    .container-infos {
+        flex-direction: column;
+
+        .container-host-star {
+            justify-content: space-between;
+            flex-direction: row-reverse;
+            width: 100%;
+            align-items: center;
+
+            .host {
+                width: 30%;
+            }
+
+            .star {
+                width: 20%;
+            }
+        }
+    }
 }
 
-.container-tag-star {
-    display: flex;
-    justify-content: space-between;
-    width: 90%;
-    margin: 0 auto;
+@media screen and (max-width:425px) {
+    .container-infos {
+        .container-infos-lodge {
+            .container-title-location {
+                .title {
+                    font-size: 28px;
+                }
+            }
+        }
+
+        .container-host-star {
+            .star {
+                width: 40%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:320px) {
+    .container-infos {
+        .container-infos-lodge {
+            .container-title-location {
+                .title {
+                    font-size: 25px;
+                }
+            }
+        }
+
+    }
+}
+
+@media screen and (max-width:320px) {
+    .container-infos {
+        .container-infos-lodge {
+            .container-title-location {
+                .title {
+                    font-size: 25px;
+                }
+            }
+        }
+
+        .container-host-star {
+            .star {
+                width: 40%;
+            }
+        }
+    }
 }

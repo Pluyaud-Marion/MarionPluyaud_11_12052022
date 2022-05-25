@@ -1,10 +1,21 @@
 .star {
-    width: 12%;
 
     .red-star,
     .grey-star {
         width: 15%;
         height: 21px;
         margin-right: 4%;
+    }
+}
+
+@media screen and (max-width:425px) {
+    .star {
+
+        .red-star,
+        .grey-star {
+            width: 12%;
+            height: 18px;
+        }
+
     }
 }
