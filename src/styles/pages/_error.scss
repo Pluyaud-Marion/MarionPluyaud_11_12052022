@@ -24,8 +24,31 @@
 }
 
 @media screen and (max-width:767px) {
-    h2 {
-        text-align: center;
-        width: 60%;
+    .container-error {
+        h1 {
+            font-size: 150px;
+        }
+
+        h2 {
+            text-align: center;
+            width: 60%;
+        }
+    }
+}
+
+@media screen and (max-width:425px) {
+    .container-error {
+        h1 {
+            font-size: 100px;
+        }
+
+        h2 {
+            font-size: 18px;
+            width: 80%;
+        }
+
+        .link {
+            font-size: 14px;
+        }
     }
 }

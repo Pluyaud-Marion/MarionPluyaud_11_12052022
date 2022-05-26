@@ -33,20 +33,88 @@
         }
 
         .title {
-            font-size: 30px;
+            font-size: 28px;
             top: 50px;
             text-align: start;
             margin-left: 2%;
-            width: 38%;
+            width: 45%;
         }
     }
 }
 
-@media screen and (max-width:749px) {
+@media screen and (max-width:623px) {
     .banner {
         .title {
-            font-size: 25px;
-            width: 32%;
+            width: 50%;
+        }
+    }
+}
+
+@media screen and (max-width:561px) {
+    .banner {
+        .title {
+            width: 55%;
+        }
+    }
+}
+
+@media screen and (max-width:510px) {
+    .banner {
+        .title {
+            width: 60%;
+        }
+    }
+}
+
+@media screen and (max-width:467px) {
+    .banner {
+        .title {
+            width: 65%;
+        }
+    }
+}
+
+@media screen and (max-width:431px) {
+    .banner {
+        .title {
+            font-size: 23px;
+            width: 55%;
+        }
+    }
+}
+
+@media screen and (max-width:419px) {
+    .banner {
+        .title {
+            font-size: 23px;
+            width: 60%;
+        }
+    }
+}
+
+@media screen and (max-width:384px) {
+    .banner {
+        .title {
+            font-size: 20px;
+            width: 55%;
+        }
+    }
+}
+
+@media screen and (max-width:364px) {
+    .banner {
+        .title {
+            font-size: 20px;
+            width: 60%;
+        }
+    }
+}
+
+@media screen and (max-width:334px) {
+    .banner {
+        .title {
+            font-size: 20px;
+            width: 65%;
         }
     }
 }

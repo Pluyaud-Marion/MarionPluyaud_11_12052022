@@ -52,7 +52,7 @@
                 color: $primary-color;
                 margin-left: 10%;
                 text-align: end;
-                width: 40%;
+                width: 50%;
             }
 
             img {
@@ -66,6 +66,25 @@
             margin-top: 5%;
         }
 
+    }
+}
+
+@media screen and (max-width:1220px) {
+    .container-infos {
+        .container-host-star {
+
+            .host {
+                width: 100%;
+
+                .name {
+                    width: 100%;
+                }
+
+                img {
+                    width: 30%;
+                }
+            }
+        }
     }
 }
 
@@ -89,11 +108,42 @@
             align-items: center;
 
             .host {
-                width: 30%;
+                width: 20%;
+
+                .name {
+                    width: 51%;
+                    font-size: 14px;
+                }
             }
 
             .star {
                 width: 20%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:600px) {
+    .container-infos {
+        .container-host-star {
+            .host {
+                .name {
+                    width: 54%;
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:520px) {
+    .container-infos {
+        .container-host-star {
+            .host {
+                .name {
+                    width: 60%;
+                    font-size: 12px;
+                }
             }
         }
     }
@@ -112,6 +162,15 @@
         .container-host-star {
             .star {
                 width: 40%;
+            }
+
+            .host {
+                width: 35%;
+
+                .name {
+                    font-size: 12px;
+                    width: 47%;
+                }
             }
         }
     }
