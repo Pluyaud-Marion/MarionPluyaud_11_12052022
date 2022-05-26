@@ -52,3 +52,13 @@
         font-size: 13px
     }
 }
+
+@media screen and (min-width: 1600px) {
+    .arrow-next {
+        right: 160px;
+    }
+
+    .arrow-prev {
+        left: 160px;
+    }
+}
