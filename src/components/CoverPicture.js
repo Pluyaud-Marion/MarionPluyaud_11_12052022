@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 
 /**
- * 
+ * component CoverPicture = arrow next and previous, picture and index
  * @param {Object} allPictures - props of parent lodging / all of pictures of one lodge
- * @returns component CoverPicture = arrow next and previous, picture and index
+ * @returns {JSX} - React component
  */
 const CoverPicture = ({ allPictures }) => {
 

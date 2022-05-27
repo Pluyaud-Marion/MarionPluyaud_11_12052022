@@ -3,7 +3,7 @@ import React from 'react';
 /**
  * 
  * @param {string} tag - props of component parent Lodging  - each of tag 
- * @returns component tag
+ * @returns {JSX} - React component
  */
 const Tag = ({ tag }) => {
 

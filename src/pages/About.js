@@ -2,8 +2,8 @@ import React from 'react';
 import Dropdown from '../components/Dropdown';
 
 /**
- * 
- * @returns About Page - with banner and Dropdown components
+ * About Page - with banner and Dropdown components
+ * @returns {JSX} - React component - Page
  */
 const About = () => {
     /**

@@ -2,9 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 /**
- * 
+ * component Card with all infos - add id in url params
  * @param {Object} lodge -  props of component parent Gallery (infos about one lodge)
- * @returns component Card with all infos - add id in url params
+ * @returns {JSX} - React component
  */
 const Card = ({ lodge }) => {
     return (

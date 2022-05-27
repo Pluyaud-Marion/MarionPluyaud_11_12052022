@@ -8,7 +8,7 @@ import Footer from "./components/Footer";
 
 /**
  * Router
- * @returns all route
+ * @returns {JSX} - React component
  */
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/lodging/:id" element={<Lodging />} />
-        {/* <Route path="/error" element={<Error />} /> */}
+        <Route path="/error" element={<Error />} />
         <Route path="*" element={<Error />} />
       </Routes>
       <Footer />

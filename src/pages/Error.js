@@ -2,8 +2,8 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 /**
- * 
- * @returns Error Page - with text and navlink for return home
+ * Error Page - with text and navlink for return home
+ * @returns {JSX} - React component - Page
  */
 const Error = () => {
     return (

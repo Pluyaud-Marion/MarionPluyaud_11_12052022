@@ -1,17 +1,15 @@
 
-import { useParams } from 'react-router-dom';
-// import { useParams, Navigate } from 'react-router-dom';
+import { useParams, Navigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import Tag from '../components/Tag';
 import Star from '../components/Star';
 import Dropdown from '../components/Dropdown';
-// import Error from './Error';
 import CoverPicture from '../components/CoverPicture';
 
 /**
- * 
- * @returns Lodging page with datas and components CoverPicture / Tag / Star / Dropdown
+ * Lodging page with datas and components CoverPicture / Tag / Star / Dropdown
+ * @returns {JSX} - React component - Page
  */
 const Lodging = () => {
 
@@ -25,25 +23,22 @@ const Lodging = () => {
      * @constant data - with axios.get in json. Update with setData
      * @type {object}
      */
-    const [data, setData] = useState([])
+    const [data, setData] = useState("")
 
 
     useEffect(() => {
         axios.get("../data.json")
             .then(res => {
-                if (res.data.find((data => data.id === id)) === undefined) {
-                    window.location.pathname = '../error'
-                } else {
-                    setData(res.data.find(data => data.id === id))
-                }
+                setData(res.data.find(data => data.id === id))
 
-                //<Navigate to={<Error />} />
             })
             .catch(error => console.log(error))
 
-
-
     }, [id])
+
+    if (data === undefined) {
+        return <Navigate to="/error" />
+    }
 
     return (
         <div>

@@ -1,9 +1,9 @@
 import React from 'react';
 
 /**
- * 
+ * component Star (pictures of star red or grey)
  * @param {string} star - props of parent lodging / number of star of lodge
- * @returns component Star (pictures of star red or grey)
+ * @returns {JSX} - React component
  */
 const Star = ({ star }) => {
     const range = [1, 2, 3, 4, 5]

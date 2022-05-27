@@ -3,9 +3,9 @@ import axios from 'axios';
 import Card from './Card';
 
 /**
+ * component Gallery (parent of component Card with props lodge : data ) - Axios for get data (in json) 
+ * @returns {JSX} - React component
  * 
- * @returns component Gallery (parent of component Card with props lodge : data )
- * Axios for get data (in json) 
  */
 const Gallery = () => {
     /**

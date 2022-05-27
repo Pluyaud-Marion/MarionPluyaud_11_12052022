@@ -1,8 +1,8 @@
 import React from 'react';
 
 /**
- * 
- * @returns component footer with p and picture
+ * component footer with p and picture
+ * @returns {JSX} - React component
  */
 const Footer = () => {
     return (

@@ -2,8 +2,8 @@ import React from 'react';
 import Gallery from '../components/Gallery';
 
 /**
- * 
- * @returns Page Home with banner and component Gallery
+ * Page Home with banner and component Gallery
+ * @returns {JSX} - React component - Page
  */
 const Home = () => {
     return (

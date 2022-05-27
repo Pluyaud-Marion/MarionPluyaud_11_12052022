@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 
 /**
- * 
+ * component Dropdown with title and contentParaph of contentList
  * @param {string} titleDropdown - props of component parent Lodging - title of dropdown
  * @param {string} contentParaph  - props of component parent Lodging - content of dropdown
  * @param {object} contentList - props of component parent Lodging - content of dropdown with list
- * @returns component Dropdown with title and contentParaph of contentList
+ * @returns {JSX} - React component
  */
 const Dropdown = ({ titleDropdown, contentParaph, contentList }) => {
     /**

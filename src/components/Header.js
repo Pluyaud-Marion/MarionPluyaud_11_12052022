@@ -2,8 +2,8 @@ import React from 'react';
 import Navigation from './Navigation';
 
 /**
- * 
- * @returns component Header with logo and component Navigation
+ * component Header with logo and component Navigation
+ * @returns {JSX} - React component
  */
 const Header = () => {
     return (
