@@ -11,6 +11,7 @@ const Card = ({ lodge }) => {
         <div className='Card'>
             <Link to={"/lodging/" + lodge.id} className='link-card'>
                 <img className="picture" src={lodge.cover} alt={"photo de l'appartement " + lodge.title} />
+                <div className='overlay'></div>
                 <p className='title'>{lodge.title}</p>
             </Link>
 

@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Card from './Card';
 
+
+
 /**
  * component Gallery (parent of component Card with props lodge : data ) - Axios for get data (in json) 
  * @returns {JSX} - React component

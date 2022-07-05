@@ -19,13 +19,23 @@
             position: absolute;
         }
 
+        .overlay {
+            position: relative;
+            background: linear-gradient(0deg, #000, transparent);
+            top: 200px;
+            border-radius: 0 0 10px 10px;
+            height: 100px;
+        }
+
+
         .title {
             position: relative;
             color: white;
-            top: 230px;
+            top: 122px;
             font-size: 18px;
             left: 17px;
             width: 64%;
+            z-index: 2;
         }
     }
 }
@@ -36,7 +46,7 @@
             .title {
                 font-size: 14px;
                 width: 70%;
-                top: 240px
+                top: 132px
             }
         }
     }
@@ -48,7 +58,7 @@
             .title {
                 font-size: 13px;
                 width: 80%;
-                top: 250px
+                top: 138px
             }
         }
     }
@@ -58,7 +68,7 @@
     .Card {
         .link-card {
             .title {
-                top: 230px
+                top: 129px
             }
         }
     }
@@ -77,7 +87,7 @@
             }
 
             .title {
-                top: 220px;
+                top: 100px;
                 font-size: 20px;
                 width: 50%;
             }
@@ -89,7 +99,7 @@
     .Card {
         .link-card {
             .title {
-                top: 220px;
+                top: 100px;
                 font-size: 17px;
             }
         }
@@ -100,7 +110,7 @@
     .Card {
         .link-card {
             .title {
-                top: 230px;
+                top: 127px;
                 font-size: 13px;
             }
         }

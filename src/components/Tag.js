@@ -11,6 +11,7 @@ const Tag = ({ tag }) => {
         <div className='tag'>
             <p className='text'>{tag}</p>
         </div>
+
     );
 };
 
