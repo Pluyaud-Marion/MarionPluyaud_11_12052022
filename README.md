@@ -10,11 +10,14 @@ Site déployé sur Netlify accessible à l'adresse suivante : https://kasa-pluya
   - React v18.1.0
   - React Router v6
   - Sass
-  - Jsdoc / documentation : ....
+  - Jsdoc
 
 # Installation en local du projet :
-- cloner le repo
-- exécuter les commandes suivantes dans un terminal : `npm install && npm start`
+- Cloner le repo
+- Exécuter les commandes suivantes dans un terminal : `npm install && npm start`
+
+# Générer la documentation :
+`npm run doc`
 
 # Demandes client :
 - Maquettes fournies pour version Desktop et mobile
